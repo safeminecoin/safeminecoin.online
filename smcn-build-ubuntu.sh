@@ -95,18 +95,19 @@ sudo ufw allow 22/tcp
 sudo mkdir ~/.SafeMineCoin
 
 cat << "CONFIG" >> ~/.SafeMineCoin/SafeMineCoin.conf
+listen=0
 daemon=1
-server=1
 txindex=1
-rpcuser=rpc_smcn
-rpcpassword=F7jQ2jUG5tVyZ2N
+staking=1
+rpcuser=YourUser
+rpcpassword=YourPassword
 port=25252
 rpcport=25251
-rpcallowip=127.0.0.1
-maxconnections=150
-addnode=158.69.130.185:25251
-addnode=5.135.21.189:25251
-addnode=178.32.173.234:25251
+addnode=dnsseed.safeminecoin.org
+addnode=dnsseed.derogold.link
+addnode=178.32.173.234
+addnode=5.135.21.189
+addnode=158.69.130.185
 CONFIG
 
 chmod 700 ~/.SafeMineCoin/SafeMineCoin.conf
