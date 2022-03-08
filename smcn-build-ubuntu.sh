@@ -81,10 +81,10 @@ cd $BITCOIN_ROOT
 
 ./autogen.sh
 
-./configure LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768"
+./configure --with-incompatible-bdb --enable-upnp-default LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768" --enable-hardening
 
 make
-
+ 
 make install
 
 sudo ufw allow 25252/tcp
