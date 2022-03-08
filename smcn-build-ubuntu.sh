@@ -46,7 +46,6 @@ sudo apt-get install libqrencode-dev -y &&
 sudo apt-get install software-properties-common -y &&
 sudo add-apt-repository ppa:bitcoin/bitcoin -y &&
 sudo apt-get update -y &&
-sudo apt-get install libdb4.8-dev libdb4.8++-dev -y &&
 
 # Download safeminecoin on github 
 
