@@ -116,5 +116,6 @@ chmod 700 ~/.SafeMineCoin
 ls -la ~/.SafeMineCoin 
 
 cd ~
+cd /usr/local/bin
 
 SafeMineCoind -daemon -txindex
