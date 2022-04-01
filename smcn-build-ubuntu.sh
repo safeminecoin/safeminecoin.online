@@ -94,14 +94,17 @@ sudo ufw allow 22/tcp
 sudo mkdir ~/.SafeMineCoin
 
 cat << "CONFIG" >> ~/.SafeMineCoin/SafeMineCoin.conf
-listen=0
+listen=1
 daemon=1
+server=1
 txindex=1
-staking=1
-rpcuser=YourUser
-rpcpassword=YourPassword
+staking=0
 port=25252
 rpcport=25251
+rpcuser=SkGNKbFSDbTtkR9129xdyeA7EtSNVAJd1M
+rpcpassword=c=SMCN
+rpcconnect=127.0.0.1
+rpcallowip=127.0.0.1
 addnode=dnsseed.safeminecoin.org
 addnode=135.125.225.55
 addnode=51.195.249.132
