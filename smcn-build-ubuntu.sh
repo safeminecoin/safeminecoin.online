@@ -53,7 +53,7 @@ cd ~
 
 git clone -b master --single-branch https://github.com/safeminecoin/safeminecoin.git
 
-cd safeminecoin && chmod +x autogen.sh && cd share && chmod +x genbuild.sh && cd ..
+cd safeminecoin
 
 # Install libdb6.2 (Berkeley DB)
 
