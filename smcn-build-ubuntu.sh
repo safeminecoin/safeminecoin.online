@@ -103,10 +103,9 @@ rpcpassword=YourPassword
 port=25252
 rpcport=25251
 addnode=dnsseed.safeminecoin.org
-addnode=dnsseed.derogold.link
-addnode=178.32.173.234
-addnode=5.135.21.189
-addnode=158.69.130.185
+addnode=135.125.225.55
+addnode=51.195.249.132
+addnode=51.77.48.45
 CONFIG
 
 chmod 700 ~/.SafeMineCoin/SafeMineCoin.conf
