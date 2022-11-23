@@ -12,7 +12,7 @@
 # added swapfile ( you can change swapfile allocate in : fallocate -l 3G /swapfile
 
 swapoff -a
-fallocate -l 3G /swapfile  
+fallocate -l 1G /swapfile  
 chown root:root /swapfile  
 chmod 0600 /swapfile  
 sudo bash -c "echo 'vm.swappiness = 10' >> /etc/sysctl.conf"  
@@ -76,12 +76,11 @@ cd db-6.2.32/build_unix/
 make install
 
 # build and install safeminecoin 
-
 cd $BITCOIN_ROOT
 
 ./autogen.sh
 
-./configure --with-incompatible-bdb --enable-upnp-default LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768" --enable-hardening
+./configure --with-incompatible-bdb --enable-upnp-default LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768" --disable-tests --disable-bench --disable-gui-tests --enable-hardening
 
 make
  
@@ -101,14 +100,16 @@ txindex=1
 staking=0
 port=25252
 rpcport=25251
-rpcuser=SkGNKbFSDbTtkR9129xdyeA7EtSNVAJd1M
-rpcpassword=c=SMCN
+rpcuser=SMCN-User
+rpcpassword=c=SMCN-Password
 rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
 addnode=dnsseed.safeminecoin.org
-addnode=135.125.225.55
-addnode=51.195.249.132
-addnode=51.77.48.45
+addnode=dnsseed2.safeminecoin.org
+addnode=dnsseed3.safeminecoin.org
+addnode=dnsseed4.safeminecoin.org
+addnode=dnsseed5.safeminecoin.org
+addnode=dnsseed6.safeminecoin.org
 CONFIG
 
 chmod 700 ~/.SafeMineCoin/SafeMineCoin.conf
@@ -118,4 +119,4 @@ ls -la ~/.SafeMineCoin
 cd ~
 cd /usr/local/bin
 
-SafeMineCoind -daemon -txindex
+./SafeMineCoind -daemon -txindex
