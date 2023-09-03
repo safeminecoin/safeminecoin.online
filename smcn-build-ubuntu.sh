@@ -12,7 +12,7 @@
 # added swapfile ( you can change swapfile allocate in : fallocate -l 3G /swapfile
 
 swapoff -a
-fallocate -l 1G /swapfile  
+fallocate -l 2G /swapfile  
 chown root:root /swapfile  
 chmod 0600 /swapfile  
 sudo bash -c "echo 'vm.swappiness = 10' >> /etc/sysctl.conf"  
@@ -80,7 +80,7 @@ cd $BITCOIN_ROOT
 
 ./autogen.sh
 
-./configure --with-incompatible-bdb --enable-upnp-default LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768" --disable-tests --disable-bench --disable-gui-tests --enable-hardening
+./configure --with-incompatible-bdb --enable-upnp-default LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768" --disable-tests --disable-bench --disable-gui-tests --disable-zmq --enable-hardening
 
 make
  
