@@ -44,8 +44,9 @@ sudo apt-get install libqrencode-dev -y &&
 
 # Install the repository ppa:bitcoin/bitcoin
 sudo apt-get install software-properties-common -y &&
-sudo add-apt-repository ppa:bitcoin/bitcoin -y &&
-sudo apt-get update -y &&
+sudo add-apt-repository ppa:luke-jr/bitcoincore -y &&
+sudo apt update -y && 
+sudo apt upgrade -y
 
 # Download safeminecoin on github 
 
